@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13241" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Nomination" representedClassName="Nomination" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="report" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Report" inverseName="nominations" inverseEntity="Report" syncable="YES"/>
+    </entity>
+    <entity name="Report" representedClassName="Report" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="nominations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Nomination" inverseName="report" inverseEntity="Nomination" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Report" positionX="8269" positionY="1908" width="128" height="73"/>
+        <element name="Nomination" positionX="8485" positionY="1919" width="128" height="88"/>
+    </elements>
+</model>
