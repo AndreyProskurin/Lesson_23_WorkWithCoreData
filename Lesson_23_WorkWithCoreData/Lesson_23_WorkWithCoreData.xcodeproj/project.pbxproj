@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		329267EE1FA927E600B62143 /* Nomination+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 329267EB1FA927E600B62143 /* Nomination+CoreDataClass.m */; };
+		329267EF1FA927E600B62143 /* Nomination+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 329267ED1FA927E600B62143 /* Nomination+CoreDataProperties.m */; };
 		32D5382B1FA8E63A00F5BD41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D5382A1FA8E63A00F5BD41 /* AppDelegate.m */; };
 		32D538311FA8E63A00F5BD41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32D5382F1FA8E63A00F5BD41 /* Main.storyboard */; };
 		32D538331FA8E63A00F5BD41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D538321FA8E63A00F5BD41 /* Assets.xcassets */; };
@@ -21,12 +23,15 @@
 		32D538651FA9004700F5BD41 /* ReportsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32D538631FA9004700F5BD41 /* ReportsModel.xcdatamodeld */; };
 		32D538701FA9043100F5BD41 /* Report+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D5386D1FA9043100F5BD41 /* Report+CoreDataClass.m */; };
 		32D538711FA9043100F5BD41 /* Report+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D5386F1FA9043100F5BD41 /* Report+CoreDataProperties.m */; };
-		32D538761FA9047900F5BD41 /* Nomination+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D538731FA9047900F5BD41 /* Nomination+CoreDataClass.m */; };
-		32D538771FA9047900F5BD41 /* Nomination+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D538751FA9047900F5BD41 /* Nomination+CoreDataProperties.m */; };
 		32D5387A1FA905B900F5BD41 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D538791FA905B900F5BD41 /* DataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		329267E91FA9230200B62143 /* NominationModuleProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NominationModuleProtocol.h; sourceTree = "<group>"; };
+		329267EA1FA927E600B62143 /* Nomination+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nomination+CoreDataClass.h"; sourceTree = "<group>"; };
+		329267EB1FA927E600B62143 /* Nomination+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Nomination+CoreDataClass.m"; sourceTree = "<group>"; };
+		329267EC1FA927E600B62143 /* Nomination+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nomination+CoreDataProperties.h"; sourceTree = "<group>"; };
+		329267ED1FA927E600B62143 /* Nomination+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Nomination+CoreDataProperties.m"; sourceTree = "<group>"; };
 		32D538261FA8E63A00F5BD41 /* Lesson_23_WorkWithCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson_23_WorkWithCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D538291FA8E63A00F5BD41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32D5382A1FA8E63A00F5BD41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,10 +58,6 @@
 		32D5386D1FA9043100F5BD41 /* Report+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Report+CoreDataClass.m"; sourceTree = "<group>"; };
 		32D5386E1FA9043100F5BD41 /* Report+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Report+CoreDataProperties.h"; sourceTree = "<group>"; };
 		32D5386F1FA9043100F5BD41 /* Report+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Report+CoreDataProperties.m"; sourceTree = "<group>"; };
-		32D538721FA9047900F5BD41 /* Nomination+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nomination+CoreDataClass.h"; sourceTree = "<group>"; };
-		32D538731FA9047900F5BD41 /* Nomination+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Nomination+CoreDataClass.m"; sourceTree = "<group>"; };
-		32D538741FA9047900F5BD41 /* Nomination+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nomination+CoreDataProperties.h"; sourceTree = "<group>"; };
-		32D538751FA9047900F5BD41 /* Nomination+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Nomination+CoreDataProperties.m"; sourceTree = "<group>"; };
 		32D538781FA905B900F5BD41 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		32D538791FA905B900F5BD41 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +172,7 @@
 		32D538461FA8E98800F5BD41 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				329267E91FA9230200B62143 /* NominationModuleProtocol.h */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -254,10 +256,10 @@
 		32D538621FA8FFA200F5BD41 /* Nominations */ = {
 			isa = PBXGroup;
 			children = (
-				32D538721FA9047900F5BD41 /* Nomination+CoreDataClass.h */,
-				32D538731FA9047900F5BD41 /* Nomination+CoreDataClass.m */,
-				32D538741FA9047900F5BD41 /* Nomination+CoreDataProperties.h */,
-				32D538751FA9047900F5BD41 /* Nomination+CoreDataProperties.m */,
+				329267EA1FA927E600B62143 /* Nomination+CoreDataClass.h */,
+				329267EB1FA927E600B62143 /* Nomination+CoreDataClass.m */,
+				329267EC1FA927E600B62143 /* Nomination+CoreDataProperties.h */,
+				329267ED1FA927E600B62143 /* Nomination+CoreDataProperties.m */,
 			);
 			path = Nominations;
 			sourceTree = "<group>";
@@ -338,14 +340,14 @@
 				32D5384D1FA8EA9600F5BD41 /* NominationModel.m in Sources */,
 				32D538651FA9004700F5BD41 /* ReportsModel.xcdatamodeld in Sources */,
 				32D538391FA8E63A00F5BD41 /* main.m in Sources */,
-				32D538761FA9047900F5BD41 /* Nomination+CoreDataClass.m in Sources */,
 				32D538711FA9043100F5BD41 /* Report+CoreDataProperties.m in Sources */,
+				329267EE1FA927E600B62143 /* Nomination+CoreDataClass.m in Sources */,
 				32D5382B1FA8E63A00F5BD41 /* AppDelegate.m in Sources */,
 				32D538531FA8EAC800F5BD41 /* ReportModel.m in Sources */,
+				329267EF1FA927E600B62143 /* Nomination+CoreDataProperties.m in Sources */,
 				32D5387A1FA905B900F5BD41 /* DataManager.m in Sources */,
 				32D538561FA8EAE900F5BD41 /* ReportView.m in Sources */,
 				32D5385C1FA8EB2500F5BD41 /* NominationView.m in Sources */,
-				32D538771FA9047900F5BD41 /* Nomination+CoreDataProperties.m in Sources */,
 				32D538701FA9043100F5BD41 /* Report+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

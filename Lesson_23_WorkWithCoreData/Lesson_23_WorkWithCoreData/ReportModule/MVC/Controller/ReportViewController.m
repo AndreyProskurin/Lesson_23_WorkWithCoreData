@@ -10,6 +10,7 @@
 #import "ReportModel.h"
 #import "ReportView.h"
 #import "ReportModuleProtocol.h"
+#import "NominationViewController.h"
 
 @interface ReportViewController () <ReportModelOutput, ReportViewInput, UITableViewDelegate, UITableViewDataSource>
 
@@ -24,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setup];
-    
+
 }
 
 #pragma mark - lazy init
@@ -49,11 +50,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *const cellIdentifier = @"cell";
+    static NSString *const cellIdentifier = @"reportCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     [self configureCell:cell forRowAtIndexPath:indexPath];
@@ -62,16 +63,15 @@
 }
 
 - (void)configureCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    // config
 }
 
-#pragma mark - UITableViewDelegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
-
-
-
+//#pragma mark - navigation
+//
+//- (void)showNominationsScreen {
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    NominationViewController *nominationVC = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([NominationViewController class])];
+//    [self.navigationController pushViewController:nominationVC animated:YES];
+//}
 
 @end

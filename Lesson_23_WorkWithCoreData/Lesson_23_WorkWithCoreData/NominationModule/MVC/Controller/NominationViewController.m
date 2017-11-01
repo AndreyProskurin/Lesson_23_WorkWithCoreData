@@ -7,8 +7,14 @@
 //
 
 #import "NominationViewController.h"
+#import "NominationModel.h"
+#import "NominationView.h"
+#import "NominationModuleProtocol.h"
 
-@interface NominationViewController ()
+@interface NominationViewController () <NominationModelOutput, NominationViewInput, UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) NominationModel *model;
+@property (nonatomic, weak) IBOutlet NominationView *contentView;
 
 @end
 
@@ -16,22 +22,48 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setup];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Lazy init
+
+- (NominationModel *)model {
+    if (!_model)
+        _model = [[NominationModel alloc] init];
+    return _model;
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Private methods
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setup {
+    self.model.modelOutput = self;
+    self.contentView.userInterfaceInput = self;
 }
-*/
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *const cellIdentifier = @"nominationCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    [self configureCell:cell forRowAtIndexPath:indexPath];
+    
+    return cell;
+}
+
+- (void)configureCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    // config
+}
+
+
 
 @end

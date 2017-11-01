@@ -24,8 +24,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="qmJ-4r-ObH">
-                                                <rect key="frame" x="0.0" y="56" width="320" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reportCell" id="qmJ-4r-ObH">
+                                                <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qmJ-4r-ObH" id="hxR-PB-CBY">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -70,6 +70,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="431.25" y="29.577464788732396"/>
+        </scene>
+        <!--Nomination View Controller-->
+        <scene sceneID="u9d-ja-U6Q">
+            <objects>
+                <viewController storyboardIdentifier="NominationViewController" id="LGG-4u-3de" customClass="NominationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cCR-dZ-a5p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ne-8z-s89" customClass="NominationView">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FGQ-eb-THx">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nominationCell" id="TzY-uX-UrA">
+                                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TzY-uX-UrA" id="g3X-59-cXD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="LGG-4u-3de" id="15j-dv-ZRv"/>
+                                            <outlet property="delegate" destination="LGG-4u-3de" id="uVD-kc-ieg"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="FGQ-eb-THx" firstAttribute="leading" secondItem="7Ne-8z-s89" secondAttribute="leading" id="9nz-hS-6rX"/>
+                                    <constraint firstAttribute="trailing" secondItem="FGQ-eb-THx" secondAttribute="trailing" id="Tp2-CH-GQV"/>
+                                    <constraint firstAttribute="bottom" secondItem="FGQ-eb-THx" secondAttribute="bottom" id="oih-ei-YNX"/>
+                                    <constraint firstItem="FGQ-eb-THx" firstAttribute="top" secondItem="7Ne-8z-s89" secondAttribute="top" id="rhD-kF-QPT"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="tableView" destination="FGQ-eb-THx" id="LCG-0G-e6F"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tTu-54-VmN" firstAttribute="trailing" secondItem="7Ne-8z-s89" secondAttribute="trailing" id="6hO-cY-RlR"/>
+                            <constraint firstItem="7Ne-8z-s89" firstAttribute="leading" secondItem="tTu-54-VmN" secondAttribute="leading" id="9WZ-rx-VWR"/>
+                            <constraint firstItem="7Ne-8z-s89" firstAttribute="top" secondItem="tTu-54-VmN" secondAttribute="top" id="AGi-8u-iCd"/>
+                            <constraint firstItem="tTu-54-VmN" firstAttribute="bottom" secondItem="7Ne-8z-s89" secondAttribute="bottom" id="OKq-oF-14a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tTu-54-VmN"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="7Ne-8z-s89" id="b6o-Qq-37L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOc-4d-SQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229" y="36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r6c-lg-VVh">

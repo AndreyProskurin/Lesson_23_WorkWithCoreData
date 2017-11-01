@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NominationModuleProtocol.h"
 
-@interface NominationView : UIView
+@interface NominationView : UIView <NominationViewOutput>
+
+@property (weak, nonatomic) id <NominationViewInput> userInterfaceInput;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end

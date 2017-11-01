@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NominationModuleProtocol.h"
 
-@interface NominationModel : NSObject
+@interface NominationModel : NSObject <NominationModelInput>
+
+@property (nonatomic, weak) id <NominationModelOutput> modelOutput;
 
 @end
