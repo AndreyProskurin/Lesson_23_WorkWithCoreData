@@ -12,6 +12,5 @@
 @interface NominationView : UIView <NominationViewOutput>
 
 @property (weak, nonatomic) id <NominationViewInput> userInterfaceInput;
-@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end

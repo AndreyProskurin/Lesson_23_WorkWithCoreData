@@ -10,24 +10,36 @@
 
 @protocol ReportModelInput <NSObject>
 
+// VC -> model (обращение к данным модели)
 
+- (NSInteger)reportsCount;
+- (id)reportAtIndex:(NSInteger)index;
+
+- (void)createNewTestReport;
+- (void)needToReloadData;
 
 @end
 
 @protocol ReportModelOutput <NSObject>
 
+// model -> VC (передача данных контроллеру)
 
+- (void)dataDidReload;
 
 @end
 
 @protocol ReportViewInput <NSObject>
 
+// view -> VC (какое-то действие юзера на view)
 
+- (void)addReportButtonWasTapped;
+//- (void)deleteReportButtonWasTapped;
 
 @end
 
 @protocol ReportViewOutput <NSObject>
 
+// VC -> view (показать изменения интерфейса)
 
 
 @end

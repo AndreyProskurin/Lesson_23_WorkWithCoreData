@@ -8,14 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "Report+CoreDataProperties.h"
-#import "Nomination+CoreDataProperties.h"
 
 @interface DataManager : NSObject
 
 + (id)storage;
-
-- (Report *)createReport;
-- (NSArray *)allReports;
+- (NSManagedObjectContext *)context;
+- (void)saveContext;
 
 @end

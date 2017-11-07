@@ -10,6 +10,11 @@
 
 @implementation ReportView
 
+- (IBAction)addNewReportButtonAction:(UIButton *)sender {
+    if ([self.userInterfaceInput respondsToSelector:@selector(addReportButtonWasTapped)]) {
+        [self.userInterfaceInput addReportButtonWasTapped];
+    }
+}
 
 
 @end

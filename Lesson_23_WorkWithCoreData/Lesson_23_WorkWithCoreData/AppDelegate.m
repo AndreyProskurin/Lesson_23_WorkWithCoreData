@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "DataManager.h"
+#import "Report+CoreDataProperties.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//    [[DataManager storage] createReportWithName:@"My Rerort"];
+//    NSArray *arr = [[DataManager storage] allReports];
+//    NSLog(@"%@", arr.firstObject);
     // Override point for customization after application launch.
     return YES;
 }
