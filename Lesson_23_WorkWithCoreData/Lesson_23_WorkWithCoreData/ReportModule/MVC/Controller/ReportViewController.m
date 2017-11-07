@@ -44,9 +44,28 @@ static NSInteger const numberOfSectionsInTableView = 1;
     self.model.modelOutput = self;
     self.contentView.userInterfaceInput = self;
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.contentView.tableView.allowsMultipleSelectionDuringEditing = YES;
+
+    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Edit"
+                                                                     style:UIBarButtonItemStylePlain
+                                                                    target:self
+                                                                    action:@selector(editButtonAction:)];
+    
+    self.navigationItem.rightBarButtonItem = barButtonItem;
+//    [barButtonItem release];
+
+//    [barButtonItem addTarget:self action:@selector(editButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+//    self.navigationItem.rightBarButtonItem = barButtonItem;
     
     [self.model needToReloadData];
+}
+
+-(IBAction)editButtonAction:(id)sender {
+    [self.contentView.tableView setEditing:!self.contentView.tableView.editing animated:YES];
+    
+    if (self.contentView.tableView.editing)
+        [self.navigationItem.rightBarButtonItem setTitle:@"Done"];
+    else
+        [self.navigationItem.rightBarButtonItem setTitle:@"Edit"];
 }
 
 #pragma mark - Table view data source
@@ -78,14 +97,19 @@ static NSInteger const numberOfSectionsInTableView = 1;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        if ([self.model respondsToSelector:@selector(deleteReportAtIndex:)]) {
+            NSLog(@"UITableViewCellEditingStyleDelete");
+            [self.model deleteReportAtIndex:indexPath.row];
+            [tableView deleteRowsAtIndexPaths:@[indexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        NSLog(@"UITableViewCellEditingStyleInsert");
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }
+    }
 }
-
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

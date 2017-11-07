@@ -13,7 +13,9 @@
 // VC -> model (обращение к данным модели)
 
 - (NSInteger)reportsCount;
+
 - (id)reportAtIndex:(NSInteger)index;
+- (void)deleteReportAtIndex:(NSInteger)index;
 
 - (void)createNewTestReport;
 - (void)needToReloadData;

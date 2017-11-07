@@ -27,6 +27,15 @@
     return [self.reportsArray objectAtIndex:index];
 }
 
+- (void)deleteReportAtIndex:(NSInteger)index {
+    Report *report = [self.reportsArray objectAtIndex:index];
+    [[DataManager storage] removeReport:report];
+    [[DataManager storage] saveContext];
+    [self.reportsArray removeObjectAtIndex:index];
+    [self reloadData];
+//    [self.modelOutput dataDidReload];
+}
+
 - (void)createNewTestReport {
     [[DataManager storage] createReport];
     [[DataManager storage] saveContext];
@@ -43,6 +52,7 @@
 
 - (void)reloadData {
     self.reportsArray = [NSMutableArray arrayWithArray:[[DataManager storage] allReports]];
+    NSLog(@"%ld", [self reportsCount]);
 }
 
 @end
